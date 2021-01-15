@@ -58,7 +58,7 @@ async def zombies(event):
     del_status = "No Deleted Accounts Found, Group Is Clean."
 
     if con != "clean":
-        find_zombies = await event.respond("Searching For Zombies...")
+        find_zombies = await event.respond("Searching For Zombies Here🧐🧐...")
         async for user in event.client.iter_participants(event.chat_id):
 
             if user.deleted:
@@ -66,7 +66,7 @@ async def zombies(event):
                 await sleep(1)
         if del_u > 0:
             del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nClean Them By Using :-\n 👉 `/zombies clean`"
+            \nKill Them By Using :-\n 👉 `/zombies clean 🔪🔪`"
         await find_zombies.edit(del_status)
         return
 
@@ -85,7 +85,7 @@ async def zombies(event):
         await event.respond("I Am Not An Admin Here!")
         return
 
-    cleaning_zombies = await event.respond("Cleaning Zombies...")
+    cleaning_zombies = await event.respond("Wait Sur! Killing Zombies 🔥...")
     del_u = 0
     del_a = 0
 
