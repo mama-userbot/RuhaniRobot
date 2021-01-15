@@ -51,30 +51,24 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello {}
-
-my name is {}
-
-A Powerful Telegram Probot with a lot of Special Features !!
-
+✨ Hey there! I am ✨ {} ~.
+Im an Anime themed Group Management Bot, feel free to add me to your groups!
 You can find my list of available commands with /help.
-
-Maintained by [꧁𒆜 𝖧𝗈𝗉𝖾 𒆜 ꧂](http://t.me/Hope_op)
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-🔹I am a pro group management bot, here to help you get around and keep the order in your groups!
-🔹I have lots of handy features, such as:
+
+💠I am a pro group management bot, here to help you get around and keep the order in your groups!
+💠I have lots of handy features, such as:
   ✨ flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
   ✨ Not only this i have alot features , you can check out that by clicking on modules.
   ✨ Else you can check module by sending /help <module name> in PM.
-
 {}
 Here is modules:
 """.format(
     dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+    if not ALLOW_EXCL else "\nAll commands can be triggered with the following: /, !.\n")
 
 SAITAMA_IMG = "https://telegra.ph/file/23ea02d917b6a3c0f5d5c.jpg"
 
@@ -206,7 +200,7 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                             text=" 🦅 Join KWS ",
-                            url="https://t.me/Team_Kws"),
+                            url="https://t.me/Kws_Team"),
                          InlineKeyboardButton(
                             text=" ❤️ Channel ",
                              url="https://t.me/Melody_Music_Zone")        
@@ -215,8 +209,6 @@ def start(update: Update, context: CallbackContext):
                         InlineKeyboardButton(
                              text=" ✨ Support ",
                              url="https://t.me/Ruhani_Support_Chat") 
-                     ],
-                     [
                         InlineKeyboardButton(
                              text=" 👨‍💻 Creator ",
                              url="https://t.me/Hope_op")
@@ -279,7 +271,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="⬅️Back", callback_data="help_back")
+                        text="⬅️ Back", callback_data="help_back")
                 ]]))
 
         elif prev_match:
