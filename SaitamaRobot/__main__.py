@@ -51,33 +51,32 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-Build by weebs for weebs, I specialize in managing anime and similar themed groups.
+Hello {}
+
+my name is {}
+
+A Powerful Telegram Probot with a lot of Special Features !!
+
 You can find my list of available commands with /help.
+
+Maintained by [꧁𒆜 𝖧𝗈𝗉𝖾 𒆜 ꧂](http://t.me/Hope_op)
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm Dr Stone & I help admins to manage their groups! Have a look at the following for an idea of some of \
-the things I can help you with.
-
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-
+🔹I am a pro group management bot, here to help you get around and keep the order in your groups!
+🔹I have lots of handy features, such as:
+  ✨ flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
+  ✨ Not only this i have alot features , you can check out that by clicking on modules.
+  ✨ Else you can check module by sending /help <module name> in PM.
 
 {}
-And the following:
+Here is modules:
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://images.alphacoders.com/103/thumb-1920-1031089.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/23ea02d917b6a3c0f5d5c.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Senku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
@@ -200,26 +199,27 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text=" 👑 Summon Me ",
+                            text=" 👸 Invite me in your place ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
-                         InlineKeyboardButton(
-                             text=" 🔔 Updates ",
-                             url="https://t.me/SenkuUpdates")
                      ],
                      [
                         InlineKeyboardButton(
-                            text=" ✨ Help ",
-                            url="https://t.me/SenkuRobot?start=help"),
+                            text=" 🦅 Join KWS ",
+                            url="https://t.me/Team_Kws"),
                          InlineKeyboardButton(
-                            text=" ⚡️ Get Started ",
-                             url="https://t.me/SenkuUpdates/4")        
-                       
+                            text=" ❤️ Channel ",
+                             url="https://t.me/Melody_Music_Zone")        
+                       ],
+                      [ 
+                        InlineKeyboardButton(
+                             text=" ✨ Support ",
+                             url="https://t.me/Ruhani_Support_Chat") 
                      ],
                      [
                         InlineKeyboardButton(
-                             text=" ❤️ Source Code ",
-                             url="https://github.com/FtSasaki/SenkuRobot")
+                             text=" 👨‍💻 Creator ",
+                             url="https://t.me/Hope_op")
                     
                     ]]))
     else:
@@ -271,7 +271,7 @@ def help_button(update, context):
     try:
         if mod_match:
             module = mod_match.group(1)
-            text = ("Here is the help for the *{}* module:\n".format(
+            text = ("✨You have choosen *{}* module:\n".format(
                 HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
             query.message.edit_text(
                 text=text,
@@ -279,7 +279,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back", callback_data="help_back")
+                        text="⬅️Back", callback_data="help_back")
                 ]]))
 
         elif prev_match:
@@ -332,17 +332,17 @@ def get_help(update: Update, context: CallbackContext):
                 ]]))
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Contact me in PM for help!.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Help",
+                    text="🧞‍♀️Click here for Help🧞‍♀️",
                     url="t.me/{}?start=help".format(context.bot.username))
             ]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
+        text = "✨You have choosen help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
         send_help(
             chat.id, text,
