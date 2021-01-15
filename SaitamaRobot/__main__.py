@@ -191,29 +191,28 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[
+[[
+                        InlineKeyboardButton(
+                            text=" 👸 Invite me in your place ",
+                            url="t.me/{}?startgroup=true".format(
+                                context.bot.username)),
+                     ],
+                     [
                         InlineKeyboardButton(
                             text=" 🦅 Join KWS ",
-                            url="https://t.me/Kws_Team"),
+                            url="https://t.me/Team_Kws"),
                          InlineKeyboardButton(
                             text=" ❤️ Channel ",
-                             url="https://t.me/Melody_Music_Zone")                            
-                     ],
-                     [ 
+                             url="https://t.me/Melody_Music_Zone")        
+                       ],
+                      [ 
                         InlineKeyboardButton(
                              text=" ✨ Support ",
                              url="https://t.me/Ruhani_Support_Chat") 
                          InlineKeyboardButton(
                              text=" 👨‍💻 Creator ",
                              url="https://t.me/Hope_op")
-                       
-                     ],
-                     [
-                        InlineKeyboardButton(
-                            text=" 👸 Invite me in your place ",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username)),
-                       
+                    
                     ]]))
     else:
         update.effective_message.reply_text(
