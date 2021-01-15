@@ -85,7 +85,7 @@ def check_flood(update, context) -> str:
             execstrings = "Muted for {}".format(getvalue)
             tag = "TMUTE"
         send_message(
-            update.effective_message, "Beep Boop! Boop Beep!\n{}!".format(execstrings)
+            update.effective_message, "Great, i like to leave flooding to natural disasters but you, you were just disappointed me.\n{}!".format(execstrings)
         )
 
         return (
@@ -401,24 +401,28 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
-will result in restricting that user.
- This will mute users if they send more than 10 messages in a row, bots are ignored.
- • `/flood`*:* Get the current flood control setting
-• *Admins only:*
- • `/setflood <int/'no'/'off'>`*:* enables or disables flood control
- *Example:* `/setflood 10`
- • `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
-• *Note:*
- • Value must be filled for tban and tmute!!
+ This will mute users if they send more than integer messages in a row, bots are ignored.
+ 
+➩ *Command for all*
+- /flood : Get the current flood control setting
+
+➩ *For admin or creator only*
+- /setflood int/no/off: enables or disables flood control, pass int as integer or a number
+ *Example:* /setflood 6
+- /setfloodmode <mode> <value>`*:* Action to perform when user have exceeded flood limit.
+
+➩ *Note:*
+ 
+• Modes: <ban/kick/mute/tban/tmute>
+• Values : must be filled for tban and tmute!!
  It can be:
- `5m` = 5 minutes
- `6h` = 6 hours
- `3d` = 3 days
- `1w` = 1 week
+ 5m = 5 minutes
+ 6h = 6 hours
+ 3d = 3 days
+ 1w = 1 week
  """
 
-__mod_name__ = "Anti-Flood"
+__mod_name__ = "Antiflood"
 
 FLOOD_BAN_HANDLER = MessageHandler(
     Filters.all & ~Filters.status_update & Filters.group, check_flood
