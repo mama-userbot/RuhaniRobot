@@ -88,7 +88,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f""Hey there ! <b>{user_member.user.first_name or user_id}</b> you are promoted by our sweet admin.. say thanks to him... 🤗🤗 "",
         parse_mode=ParseMode.HTML)
 
     log_message = (
@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"Sucessfully demoted this retard <b>{user_member.user.first_name or user_id}</b> , better luck next time!",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -392,13 +392,13 @@ def adminlist(update, context):
         #if user.username:
         #    name = escape_markdown("@" + user.username)
         if status == "creator":
-            text += "\n 👑 Creator:"
+            text += "\n 💠 Founder:"
             text += "\n<code> • </code>{}\n".format(name)
 
             if custom_title:
                 text += f"<code> ┗━ {html.escape(custom_title)}</code>\n"
 
-    text += "\n🔱 Admins:"
+    text += "\n👮‍♂️ Admemes:"
 
     custom_admin_list = {}
     normal_admin_list = []
@@ -454,18 +454,19 @@ def adminlist(update, context):
 
 
 __help__ = """
- • `/admins`*:* list of admins in the chat
+➩ `/admins`*:* list of admins in the chat
 
-*Admins only:*
- • `/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
- • `/unpin`*:* unpins the currently pinned message
- • `/invitelink`*:* gets invitelink
- • `/promote`*:* promotes the user replied to
- • `/demote`*:* demotes the user replied to
- • `/title <title here>`*:* sets a custom title for an admin that the bot promoted
- • `/admincache`*:* force refresh the admins list
- • `/zombies` *:* Scan deleted accounts
- • `/zombies clean` *:* Cleans deleted accounts
+🔹 *Admins only:*
+
+ ➩ `/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
+ ➩ `/unpin`*:* unpins the currently pinned message
+ ➩ `/invitelink`*:* gets invitelink
+ ➩ `/promote`*:* promotes the user replied to
+ ➩ `/demote`*:* demotes the user replied to
+ ➩ `/title <title here>`*:* sets a custom title for an admin that the bot promoted
+ ➩ `/admincache`*:* force refresh the admins list
+ ➩ `/zombies` *:* Scan deleted accounts
+ ➩ `/zombies clean` *:* Cleans deleted accounts
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
@@ -491,7 +492,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "Admin"
+__mod_name__ = "G-admin"
 __command_list__ = [
     "adminlist", "admins", "invitelink", "promote", "demote", "admincache"
 ]
