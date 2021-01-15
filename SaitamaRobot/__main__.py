@@ -200,7 +200,7 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                             text=" 🦅 Join KWS ",
-                            url="https://t.me/Team_Kws"),
+                            url="https://t.me/Kws_Team"),
                          InlineKeyboardButton(
                             text=" ❤️ Channel ",
                              url="https://t.me/Melody_Music_Zone")        
@@ -208,9 +208,7 @@ def start(update: Update, context: CallbackContext):
                       [ 
                         InlineKeyboardButton(
                              text=" ✨ Support ",
-                             url="https://t.me/Ruhani_Support_Chat") 
-                      ],
-                      [
+                             url="https://t.me/Ruhani_Support_Chat"),
                         InlineKeyboardButton(
                              text=" 👨‍💻 Creator ",
                              url="https://t.me/Hope_op")
@@ -273,7 +271,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="⬅️Back", callback_data="help_back")
+                        text="⬅️ Back", callback_data="help_back")
                 ]]))
 
         elif prev_match:
