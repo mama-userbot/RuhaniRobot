@@ -197,8 +197,7 @@ def start(update: Update, context: CallbackContext):
                             url="https://t.me/Kws_Team"),
                          InlineKeyboardButton(
                             text=" ❤️ Channel ",
-                             url="https://t.me/Melody_Music_Zone")        
-                    
+                             url="https://t.me/Melody_Music_Zone")                            
                      ],
                      [ 
                         InlineKeyboardButton(
@@ -207,12 +206,14 @@ def start(update: Update, context: CallbackContext):
                         InlineKeyboardButton(
                              text=" 👨‍💻 Creator ",
                              url="https://t.me/Hope_op")
+                       
                      ],
                      [
                         InlineKeyboardButton(
                             text=" 👸 Invite me in your place ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
+                       
                     ]]))
     else:
         update.effective_message.reply_text(
