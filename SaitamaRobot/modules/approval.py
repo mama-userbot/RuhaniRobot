@@ -196,7 +196,7 @@ def unapproveall_btn(update: Update, context: CallbackContext):
 
 
 __help__ = """
-On approving a user then locks, blacklists, and antiflood qill not applying to them.
+On approving a user then locks, blacklists, and antiflood will not applying to them.
 
 ➩ *Admin commands:*
 - `/approval`*:* Check a user's approval status in this chat.
