@@ -193,12 +193,6 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text=" 👸 Invite me in your place ",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username)),
-                     ],
-                     [
-                        InlineKeyboardButton(
                             text=" 🦅 Join KWS ",
                             url="https://t.me/Kws_Team"),
                          InlineKeyboardButton(
@@ -213,7 +207,12 @@ def start(update: Update, context: CallbackContext):
                         InlineKeyboardButton(
                              text=" 👨‍💻 Creator ",
                              url="https://t.me/Hope_op")
-                    
+                     ],
+                     [
+                        InlineKeyboardButton(
+                            text=" 👸 Invite me in your place ",
+                            url="t.me/{}?startgroup=true".format(
+                                context.bot.username)),
                     ]]))
     else:
         update.effective_message.reply_text(
