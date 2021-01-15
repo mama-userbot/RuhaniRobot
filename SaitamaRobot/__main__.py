@@ -51,7 +51,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-✨ Hey there! {}, I am ✨ {} ~.
+✨Hey {}, I am ✨ {} ~.
 Im an Anime themed Group Management Bot, feel free to add me to your groups!
 You can find my list of available commands with /help.
 """
@@ -263,7 +263,7 @@ def help_button(update, context):
     try:
         if mod_match:
             module = mod_match.group(1)
-            text = ("✨You have choosen *{}* module:\n".format(
+            text = (">> You have choosen *{}* module:\n".format(
                 HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
             query.message.edit_text(
                 text=text,
@@ -271,7 +271,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="⬅️ Back", callback_data="help_back")
+                        text=" ⬅️ Back ", callback_data="help_back")
                 ]]))
 
         elif prev_match:
@@ -334,7 +334,7 @@ def get_help(update: Update, context: CallbackContext):
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = "✨You have choosen help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
+        text = ">> You have choosen help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
         send_help(
             chat.id, text,
