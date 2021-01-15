@@ -2113,12 +2113,9 @@ def fed_user_help(update: Update, context: CallbackContext):
 __mod_name__ = "Feds"
 
 __help__ = """
-whenn everything going on well, sounds good.. suddennly spammers enters in your group, and you have to block it...\n
-Then you have to ban them in huge quantity, it hurts..\n
-But if you have many groups, and you don't want these spammers come any single group of yours - how can you deal?\n
+whenn everything going on well, sounds good.. suddennly spammers enters in your group, and you have to block it...then you have to ban them in huge quantity, it hurts..but if you have many groups, and you don't want these spammers come any single group of yours - how can you deal?\n
 Do you have to manually ban them in all yor groups?\n
-*No longer!* now you can ban a spammer in all your groups with federation!\n
-You can alot trusted admins as federation admins, so your trusted admin can ban all the spammers from chats you want to protect.\n
+*No longer!* now you can ban a spammer in all your groups with federation! You can promote trusted admins as federation admins, so your trusted admin can ban all the spammers from chats you want to protect.\n
 
 *Commands:*\n
 Feds are now divided into 3 sections for your ease. 
