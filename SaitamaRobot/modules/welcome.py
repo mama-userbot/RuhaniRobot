@@ -177,7 +177,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oh, Genos? Let's get this moving.",
+                    "Oh, Genos? Nice to see you here!.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -187,7 +187,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! A member of the Heroes Association just joined!",
+                    "Whoa! A member of the KWS just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -363,10 +363,10 @@ def new_member(update: Update, context: CallbackContext):
                         })
                     new_join_mem = f'<a href="tg://user?id={user.id}">{html.escape(new_mem.first_name)}</a>'
                     message = msg.reply_text(
-                        f"{new_join_mem}, click the button below to prove you're human.\nYou have 120 seconds.",
+                        f"{new_join_mem}, click the button below..\nYou have 120 seconds.",
                         reply_markup=InlineKeyboardMarkup([{
                             InlineKeyboardButton(
-                                text="Yes, I'm human.",
+                                text="🔸Yes, I'm human!🔸",
                                 callback_data=f"user_join_({new_mem.id})",
                             )
                         }]),
@@ -439,7 +439,7 @@ def check_not_bot(member, chat_id, message_id, context):
 
         try:
             bot.edit_message_text(
-                "*kicks user*\nThey can always rejoin and try.",
+                "*kicks user out of the group!*\nThey can always rejoin and try.",
                 chat_id=chat_id,
                 message_id=message_id,
             )
@@ -654,7 +654,7 @@ def goodbye(update: Update, context: CallbackContext):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_gdbye_preference(str(chat.id), True)
-            update.effective_message.reply_text("Ok!")
+            update.effective_message.reply_text("I'll stay quiet when new members join.")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_gdbye_preference(str(chat.id), False)
