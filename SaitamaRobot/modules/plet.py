@@ -63,7 +63,7 @@ dispatcher.add_handler(PLET_HANDLER)
 __help__ = """
    `/plet` *:-* text get funny emojify
 """
-__mod_name__ = "Plet"
+__mod_name__ = "🔸 Plet"
 
 __handlers__ = [
     PLET_HANDLER
