@@ -89,14 +89,14 @@ def warn(user: User,
         if soft_warn:  # punch
             chat.unban_member(user.id)
             reply = (
-                f"<code>❕</code><b>//Punched_User\\</b>\n"
+                f"<code>❕</code><b>\\Punched_User//</b>\n"
                 f"<code> </code><b>➩  User:</b> {mention_html(user.id, user.first_name)}\n"
                 f"<code> </code><b>➩  Count:</b> {limit}")
 
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❕</code><b>//Banned_User\\ Event</b>\n"
+                f"<code>❕</code><b>\\Banned_User// Event</b>\n"
                 f"<code> </code><b>➩  User:</b> {mention_html(user.id, user.first_name)}\n"
                 f"<code> </code><b>➩  Count:</b> {limit}")
 
@@ -119,7 +119,7 @@ def warn(user: User,
         ]])
 
         reply = (
-            f"<code>❕</code><b> \\Warned_User//</b>\n"
+            f"<code>❕</code><b> \\\Warned_User//</b>\n"
             f"<code> </code><b>➩  User:</b> {mention_html(user.id, user.first_name)}\n"
             f"<code> </code><b>➩  Count:</b> {num_warns}/{limit}")
         if reason:
