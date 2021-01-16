@@ -334,7 +334,8 @@ if is_module_loaded(FILENAME):
     dispatcher.add_handler(TOGGLE_HANDLER)
 
     __help__ = """
-    ➩ `/cmds`*:* check the current status of disabled commands
+    Do you want to disable some selected cmnds in chat ? if yes you are in right place! with the help of this module, you can disable selected cmnds.
+    - `/cmds`*:* check the current status of disabled commands
 
     ➩ *Admins only:*
     - `/enable <cmd name>`*:* enable that command
@@ -344,7 +345,7 @@ if is_module_loaded(FILENAME):
     - `/listcmds`*:* list all possible toggleable commands
     """
 
-    __mod_name__ = "Command disabling"
+    __mod_name__ = "🔹 No Cmnds"
 
 else:
     DisableAbleCommandHandler = CommandHandler
