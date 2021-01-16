@@ -401,7 +401,7 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- This will mute users if they send more than integer messages in a row, bots are ignored.
+ Are you worried from spamming in your chat ? No longer!!! This module will help you in stop spamming in your group.It will mute users if they send more than integer messages in a row, bots are ignored. you can choose diffrent modes also!!!...
  
 ➩ *Command for all*
 - /flood : Get the current flood control setting
@@ -422,7 +422,7 @@ __help__ = """
  1w = 1 week
  """
 
-__mod_name__ = "Antiflood"
+__mod_name__ = "🔸 No spam"
 
 FLOOD_BAN_HANDLER = MessageHandler(
     Filters.all & ~Filters.status_update & Filters.group, check_flood
