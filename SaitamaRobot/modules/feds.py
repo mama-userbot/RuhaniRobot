@@ -2110,7 +2110,7 @@ def fed_user_help(update: Update, context: CallbackContext):
         parse_mode=ParseMode.MARKDOWN)
 
 
-__mod_name__ = "🔸 Feds"
+__mod_name__ = "🔸 Feds        "
 
 __help__ = """
 whenn everything going on well, sounds good.. suddennly spammers enters in your group, and you have to block it...then you have to ban them in huge quantity, it hurts..but if you have many groups, and you don't want these spammers come any single group of yours - how can you deal?\n
