@@ -61,7 +61,7 @@ async def download_video(v_url):
     except:
     	return await rkp.edit("`failed to find`")
     type = "audio"
-    await rkp.edit("`Preparing to download wait for a beet...`")
+    await rkp.edit("`Preparing to download...`")
     if type == "audio":
         opts = {
             'format':
@@ -278,11 +278,9 @@ async def download_video(v_url):
 
 
 __help__ = """
-
  ➩ /song <songname artist(optional)>: uploads the song in it's best quality available
  -> *BONUS* : You can also try our fastest music bot ➩ @MusicQueen_bot
  ➩ /video <songname artist(optional)>: uploads the video song in it's best quality available
- 
 """
-		  
+
 __mod_name__ = "Songs"
