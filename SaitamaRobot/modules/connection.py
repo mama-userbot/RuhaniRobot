@@ -368,7 +368,7 @@ def connect_button(update, context):
         connect_chat(update, context)
 
 
-__mod_name__ = "🔸 Connect"
+__mod_name__ = "🔸 Connect "
 
 __help__ = """
 Sometimes, you just want to add some notes, filters to a group and mark you as afk , but you don't want everyone to see; This is where connections module come in...
