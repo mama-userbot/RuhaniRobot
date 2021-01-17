@@ -96,7 +96,7 @@ def warn(user: User,
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❕</code><b>\\Banned_User// Event</b>\n"
+                f"<code>❕</code><b>\\\Banned_User//</b>\n"
                 f"<code> </code><b>➩  User:</b> {mention_html(user.id, user.first_name)}\n"
                 f"<code> </code><b>➩  Count:</b> {limit}")
 
