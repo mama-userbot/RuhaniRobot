@@ -61,7 +61,7 @@ async def download_video(v_url):
     except:
     	return await rkp.edit("`failed to find`")
     type = "audio"
-    await rkp.edit("`Preparing to download...`")
+    await rkp.edit("`👩‍💻Preparing to download...`")
     if type == "audio":
         opts = {
             'format':
@@ -179,7 +179,7 @@ async def download_video(v_url):
     except:
     	return await rkp.edit("`failed to find`")
     type = "audio"
-    await rkp.edit("`Preparing to download...`")
+    await rkp.edit("`👩‍💻Preparing to download...`")
     if type == "audio":
         opts = {
             'format':
@@ -208,7 +208,7 @@ async def download_video(v_url):
         song = False
         video = True
     try:
-        await rkp.edit("`Fetching data, please wait..`")
+        await rkp.edit("`Fetching data, please wait 🤗🤗..`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -279,7 +279,7 @@ async def download_video(v_url):
 
 __help__ = """
  ➩ /song <songname artist(optional)>: uploads the song in it's best quality available
- -> *BONUS* : You can also try our fastest music bot ➩ @MusicQueen_bot
+
  ➩ /video <songname artist(optional)>: uploads the video song in it's best quality available
 """
 
