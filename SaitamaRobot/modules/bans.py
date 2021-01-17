@@ -229,7 +229,7 @@ def punch(update: Update, context: CallbackContext) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text("Yeahhh... let's start kicking admins?")
+        message.reply_text("Yeahhh... let's start punching admins?")
         return log_message
 
     if is_user_ban_protected(chat, user_id):
