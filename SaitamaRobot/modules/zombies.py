@@ -58,7 +58,7 @@ async def zombies(event):
     del_status = "No Deleted Accounts Found, Group Is Clean."
 
     if con != "clean":
-        find_zombies = await event.respond("Searching For Zombies Here🧐🧐...")
+        find_zombies = await event.respond("👩‍💻Searching for ghost/deleted/zombie accounts...")
         async for user in event.client.iter_participants(event.chat_id):
 
             if user.deleted:
