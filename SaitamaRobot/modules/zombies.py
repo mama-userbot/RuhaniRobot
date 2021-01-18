@@ -65,8 +65,8 @@ async def zombies(event):
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
-            del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nKill Them By Using :-\n 👉 `/zombies clean 🔪🔪`"
+            del_status = f"👩‍💻Found **{del_u}** Zombies In This Group.\
+            \nKill Them By Using :-\n ➩ `/zombies clean "
         await find_zombies.edit(del_status)
         return
 
