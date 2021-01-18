@@ -45,18 +45,18 @@ def send_rules(update, chat_id, from_pm=False):
     elif from_pm:
         bot.send_message(
             user.id,
-            "The group admins haven't set any rules for this chat yet. "
+            "No rules were set by the group admins for this chat yet.. "
             "This probably doesn't mean it's lawless though...!")
     elif rules:
         update.effective_message.reply_text(
             "Please click the button below to see the rules.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Rules", url=f"t.me/{bot.username}?start={chat_id}")
+                    text="✨Click here for Rules✨", url=f"t.me/{bot.username}?start={chat_id}")
             ]]))
     else:
         update.effective_message.reply_text(
-            "The group admins haven't set any rules for this chat yet. "
+            "No rules were set by the group admins for this chat yet.. "
             "This probably doesn't mean it's lawless though...!")
 
 
@@ -77,7 +77,7 @@ def set_rules(update: Update, context: CallbackContext):
 
         sql.set_rules(chat_id, markdown_rules)
         update.effective_message.reply_text(
-            "Successfully set rules for this group.")
+            "I have set rules for this cool group.")
 
 
 @run_async
@@ -85,7 +85,7 @@ def set_rules(update: Update, context: CallbackContext):
 def clear_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
-    update.effective_message.reply_text("Successfully cleared rules!")
+    update.effective_message.reply_text("Successfully cleared rules!..")
 
 
 def __stats__():
@@ -107,11 +107,11 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- • `/rules`*:* get the rules for this chat.
+ - `/rules`*:* get the rules for this chat.
 
 *Admins only:*
- • `/setrules <your rules here>`*:* set the rules for this chat.
- • `/clearrules`*:* clear the rules for this chat.
+ - `/setrules <your rules here>`*:* set the rules for this chat.
+ - `/clearrules`*:* clear the rules for this chat.
 """
 
 __mod_name__ = "🔸 Rules"
