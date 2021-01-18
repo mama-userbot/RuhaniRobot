@@ -59,10 +59,8 @@ You can find my list of available commands with /help.
 HELP_STRINGS = """
 Hey there! My name is *{}*.
 
-💠I am a pro group management bot, here to help you get around and keep the order in your groups!
-💠I have lots of handy features, such as:
-  ✨ flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
-  ✨ Not only this i have alot features , you can check out that by clicking on modules.
+-> I am a pro group management bot, here to help you get around and keep the order in your groups!
+-> I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
 {}
 Here is modules:
 """.format(
@@ -215,8 +213,7 @@ def start(update: Update, context: CallbackContext):
                     ]]))
     else:
         update.effective_message.reply_text(
-            "Hey! I'm alive. All systems online and functioning normally!!\n<b>⏱ Alive time:</b> <code>{}</code>\n⚙ Database Status: All OK 👌!
-\n✨ Thanks for adding me! ✨"
+            "Hey! I'm alive. All systems online and functioning normally!!\n<b>⏱ Alive time:</b> <code>{}</code>\n✨ Thanks for adding me! ✨"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
