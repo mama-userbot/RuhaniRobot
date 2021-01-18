@@ -77,7 +77,7 @@ def set_rules(update: Update, context: CallbackContext):
 
         sql.set_rules(chat_id, markdown_rules)
         update.effective_message.reply_text(
-            "I have set rules for this cool group.")
+            "I have set rules for this cool group. kek!")
 
 
 @run_async
@@ -114,7 +114,7 @@ __help__ = """
  - `/clearrules`*:* clear the rules for this chat.
 """
 
-__mod_name__ = "Rules"
+__mod_name__ = "🔶 Rules"
 
 GET_RULES_HANDLER = CommandHandler("rules", get_rules, filters=Filters.group)
 SET_RULES_HANDLER = CommandHandler("setrules", set_rules, filters=Filters.group)
