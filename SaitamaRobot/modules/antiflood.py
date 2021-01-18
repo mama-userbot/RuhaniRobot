@@ -422,7 +422,7 @@ __help__ = """
  1w = 1 week
  """
 
-__mod_name__ = "🔸 No spam"
+__mod_name__ = "No spam"
 
 FLOOD_BAN_HANDLER = MessageHandler(
     Filters.all & ~Filters.status_update & Filters.group, check_flood
