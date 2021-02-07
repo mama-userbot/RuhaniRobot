@@ -401,7 +401,8 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- Are you worried from spamming in your chat ? No longer!!! This module will help you in stop spamming in your group.It will mute users if they send more than integer messages in a row, bots are ignored. you can choose diffrent modes also!!!...
+
+ Are you worried from spamming in your chat ? No longer!!!\n This module will help you in stop spamming in your group.It will mute users if they send more than integer messages in a row, bots are ignored. you can choose diffrent modes also!!!...
  
 ➩ *Command for all*
 - /flood : Get the current flood control setting
