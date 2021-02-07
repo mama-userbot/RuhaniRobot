@@ -231,12 +231,12 @@ def info(update: Update, context: CallbackContext):
             f"🔹First Name: {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n🔸Last Name: {html.escape(user.last_name)}"
+        text += f"\nLast Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n🔹Username: @{html.escape(user.username)}"
+        text += f"\n🔸Username: @{html.escape(user.username)}"
 
-    text += f"\n🔸Permalink: {mention_html(user.id, 'link')}"
+    text += f"\n🔹Permalink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
         _stext = "\n⚜Presence: <code>{}</code>"
