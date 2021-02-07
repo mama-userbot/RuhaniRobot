@@ -401,17 +401,16 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-
- Are you worried from spamming in your chat ? No longer!!!\n This module will help you in stop spamming in your group.It will mute users if they send more than integer messages in a row, bots are ignored. you can choose diffrent modes also!!!...
- 
+Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
+will result in restricting that user.
+ This will mute users if they send more than 10 messages in a row, bots are ignored.
 ➩ *Command for all*
 - /flood : Get the current flood control setting
-
 ➩ *For admin or creator only*
 - /setflood int/no/off: enables or disables flood control, pass int as integer or a number
  *Example:* /setflood 6
+ 
 - /setfloodmode <mode> <value>`*:* Action to perform when user have exceeded flood limit.
-
 ➩ *Note:*
  
 • Modes: <ban/kick/mute/tban/tmute>
@@ -423,7 +422,7 @@ __help__ = """
  1w = 1 week
  """
 
-__mod_name__ = "No Spam"
+__mod_name__ = "🔸No Spam"
 
 FLOOD_BAN_HANDLER = MessageHandler(
     Filters.all & ~Filters.status_update & Filters.group, check_flood
