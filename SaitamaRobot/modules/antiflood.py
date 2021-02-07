@@ -401,15 +401,16 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
-will result in restricting that user.
- This will mute users if they send more than 10 messages in a row, bots are ignored.
+ Are you worried from spamming in your chat ? No longer!!!\
+This module will help you in stop spamming in your group.\
+It will mute users if they send more than integer messages in a row, bots are ignored.\
+ you can choose diffrent modes also!!!...
  • `/flood`*:* Get the current flood control setting
-• *Admins only:*
+➩  *Admins only:*
  • `/setflood <int/'no'/'off'>`*:* enables or disables flood control
  *Example:* `/setflood 10`
  • `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
-• *Note:*
+➩  *Note:*
  • Value must be filled for tban and tmute!!
  It can be:
  `5m` = 5 minutes
