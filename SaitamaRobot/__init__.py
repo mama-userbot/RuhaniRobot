@@ -3,6 +3,13 @@ import os
 import sys
 import time
 import spamwatch
+from aiohttp import ClientSession
+from telethon.sessions import StringSession
+from motor import motor_asyncio
+from odmantic import AIOEngine
+from pymongo import MongoClient
+from pymongo.errors import ServerSelectionTimeoutError
+from redis import StrictRedis
 
 from pyrogram import Client, errors
 
@@ -175,6 +182,19 @@ DRAGONS.add(OWNER_ID)
 
 DEV_USERS.add(OWNER_ID)
 
+REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+except BaseException:
+
+    raise Exception("Can't connect to redis. Please Check Again.")
+
+finally:
+
+   REDIS.ping()
     
 if not SPAMWATCH_API:
     sw = None
@@ -190,6 +210,12 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
 pbot = Client("senkuPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
+#Mongo DB
+mongodb = MongoClient(MONGO_URI, MONGO_PORT)[MONGO_DB]
+motor = motor_asyncio.AsyncIOMotorClient(MONGO_URI)
+db = motor[MONGO_DB]
+engine = AIOEngine(motor, MONGO_DB)
+
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
